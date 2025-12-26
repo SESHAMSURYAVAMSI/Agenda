@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const pdfs = [
-  { name: "09/01/2026 Agenda", file: "/Day_2.pdf" },
+  { name: "08/01/2026 Agenda", file: "/Day_1.pdf" },
 
 
 ];
