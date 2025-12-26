@@ -4,18 +4,19 @@ import { useState } from "react";
 
 const pdfs = [
   { name: "08/01/2026 Agenda", file: "/Day_1.pdf" },
-
-
 ];
 
 export default function AgendaPage() {
   const [activePdf, setActivePdf] = useState(pdfs[0].file);
 
+  // ✅ YOUR REAL VERCEL DOMAIN
+  const baseUrl = "https://agenda-pearl-seven.vercel.app";
+
   return (
     <main className="min-h-screen bg-gray-100 p-4 md:p-6">
       
       <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
-       AOICON 2026
+        AOICON 2026
       </h1>
 
       {/* Buttons */}
@@ -36,23 +37,26 @@ export default function AgendaPage() {
         ))}
       </div>
 
-      {/* PDF iframe */}
+      {/* ✅ MOBILE & WHATSAPP SAFE PDF VIEWER */}
       <div className="bg-white rounded-md shadow overflow-hidden">
         <iframe
-          src={activePdf}
-          title="Agenda PDF"
+          src={`https://docs.google.com/gview?url=${encodeURIComponent(
+            baseUrl + activePdf
+          )}&embedded=true`}
           className="w-full h-[80vh]"
+          title="Agenda PDF"
         />
       </div>
 
-      {/* Download */}
+      {/* Optional Open / Download */}
       <div className="mt-3 text-right">
         <a
-          href={activePdf}
-          download
+          href={baseUrl + activePdf}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-600 font-medium hover:underline"
         >
-          Download PDF
+          Open / Download PDF
         </a>
       </div>
 
