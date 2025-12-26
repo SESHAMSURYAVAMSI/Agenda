@@ -3,10 +3,9 @@
 import { useState } from "react";
 
 const pdfs = [
-  { name: "Day 1 Agenda", file: "/Day_1.pdf" },
-  { name: "Day 2 Agenda", file: "/Day_2.pdf" },
-  { name: "Day 3 Agenda", file: "/Day_3.pdf" },
-  { name: "Day 4 Agenda", file: "/Day_4.pdf" },
+  { name: "08/01/2026 Agenda", file: "/Day_1.pdf" },
+
+
 ];
 
 export default function AgendaPage() {
@@ -16,7 +15,7 @@ export default function AgendaPage() {
     <main className="min-h-screen bg-gray-100 p-4 md:p-6">
       
       <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
-        Event Agenda
+       AOICON 2026
       </h1>
 
       {/* Buttons */}
